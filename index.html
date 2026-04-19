@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Discover hand-picked deals on men's clothing and accessories at FinDealVault. Shop jeans, shirts, jackets, watches, wallets and more with exclusive discounts.">
+  <meta name="keywords" content="men's clothing, men's accessories, jeans, shirts, jackets, watches, wallets, belts, FinDealVault, deals">
+  <meta name="author" content="FinDealVault">
+  <title>FinDealVault | Men's Clothing & Accessories – Best Deals</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      background-color: #FFF9E6;  /* light yellow primary background */
+      color: #1E1E1E;
+      line-height: 1.4;
+    }
+
+    /* container for consistent width */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== HEADER & BRANDING ========== */
+    .site-header {
+      background: #FFD580;  /* soft orange */
+      padding: 1.5rem 0 1rem;
+      border-bottom: 3px solid #FFA500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .logo a {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      color: #2C2C2C;
+      transition: color 0.2s ease;
+    }
+    .logo a:hover {
+      color: #B4510C;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #4A3B1C;
+      margin-top: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      background: #FFE3A4;
+      margin: 1.8rem 0 2rem;
+      padding: 2.5rem 1.8rem;
+      border-radius: 32px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      border: 1px solid #FFCF7A;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #2B2B2B;
+      margin-bottom: 0.6rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #3A2E1C;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ========== FILTER BUTTONS ========== */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin: 2rem 0 2rem;
+    }
+    .filter-btn {
+      background-color: #FFE0A3;
+      border: none;
+      padding: 0.6rem 1.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      color: #3b2a1c;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-family: inherit;
+    }
+    .filter-btn:hover {
+      background-color: #FFB347;
+      transform: translateY(-2px);
+      color: #1F1F1F;
+    }
+    .filter-btn.active {
+      background-color: #FF8C00;  /* vibrant orange */
+      color: white;
+      box-shadow: 0 4px 8px rgba(255,140,0,0.3);
+      border: none;
+    }
+    /* ========== PRODUCT GRID ========== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3.5rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #FFE0A3;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.08);
+      border-color: #FFB347;
+    }
+    .product-img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      background-color: #fcf5e6;
+      display: block;
+    }
+    .product-info {
+      padding: 1rem 1rem 1.2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1e1e1e;
+    }
+    .price-wrapper {
+      margin: 0.5rem 0 0.9rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #7a6a50;
+      font-size: 0.9rem;
+      margin-right: 0.7rem;
+    }
+    .discount-price {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #C4530C;
+    }
+    .buy-btn {
+      background-color: #FFA500;
+      border: none;
+      border-radius: 60px;
+      padding: 0.7rem 0.5rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #1F1F1F;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: auto;
+      font-family: inherit;
+    }
+    .buy-btn:hover {
+      background-color: #FF8C00;
+      transform: scale(0.98);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* empty state / no products (just in case) */
+    .no-products {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 3rem;
+      background: #FFEFC0;
+      border-radius: 48px;
+      font-weight: 500;
+    }
+
+    /* footer optional */
+    .footer-note {
+      text-align: center;
+      border-top: 1px solid #FFD580;
+      padding: 2rem 0;
+      margin-top: 1rem;
+      color: #5b4a2c;
+      font-size: 0.85rem;
+    }
+
+    /* responsive touches */
+    @media (max-width: 700px) {
+      .container {
+        padding: 0 16px;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .filter-btn {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+      }
+      .products-grid {
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .logo a {
+        font-size: 1.6rem;
+      }
+      .hero {
+        padding: 1.6rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="#" aria-label="FinDealVault Home">FinDealVault</a>
+    </div>
+    <div class="tagline">Finest Deals For Everyday Wins !</div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="hero">
+    <h1>Men’s Clothing & Accessories</h1>
+    <p>Hand‑picked deals on jeans, shirts, jackets, watches, wallets and more.</p>
+  </div>
+
+  <!-- filter buttons row -->
+  <div class="filter-bar" id="filterButtonsContainer">
+    <!-- categories: All, Jeans, Pants, Shirts, Shorts, T‑Shirts, Jackets, Sweaters, Watches, Wallets, Belts -->
+    <button class="filter-btn active" data-filter="All">All</button>
+    <button class="filter-btn" data-filter="Jeans">Jeans</button>
+    <button class="filter-btn" data-filter="Pants">Pants</button>
+    <button class="filter-btn" data-filter="Shirts">Shirts</button>
+    <button class="filter-btn" data-filter="Shorts">Shorts</button>
+    <button class="filter-btn" data-filter="T-Shirts">T‑Shirts</button>
+    <button class="filter-btn" data-filter="Jackets">Jackets</button>
+    <button class="filter-btn" data-filter="Sweaters">Sweaters</button>
+    <button class="filter-btn" data-filter="Watches">Watches</button>
+    <button class="filter-btn" data-filter="Wallets">Wallets</button>
+    <button class="filter-btn" data-filter="Belts">Belts</button>
+  </div>
+
+  <!-- product grid section -->
+  <div class="products-grid" id="productsGrid"></div>
+</main>
+
+<div class="footer-note container">
+  <span>© FinDealVault — Unbeatable style, everyday value. All deals curated.</span>
+</div>
+
+<script>
+  // ----- product data: exactly 12+ items across all categories, each with title, original price, discounted price, image placeholder, category, affiliate link
+  const products = [
+    { title: "Men’s Slim Fit Jeans", original: 1999, discounted: 999, category: "Jeans", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Jeans", affLink: "https://example-affiliate-link.com?ref=findealvault&product=slim-jeans" },
+
+    { title: "Classic Straight Pants", original: 2499, discounted: 1299, category: "Pants", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Pants", affLink: "https://example-affiliate-link.com?ref=findealvault&product=straight-pants" },
+
+    { title: "Premium Cotton Shirt", original: 1799, discounted: 899, category: "Shirts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Shirt", affLink: "https://example-affiliate-link.com?ref=findealvault&product=cotton-shirt" },
+
+    { title: "Cargo Shorts", original: 1499, discounted: 799, category: "Shorts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Shorts", affLink: "https://example-affiliate-link.com?ref=findealvault&product=cargo-shorts" },
+
+{ title: "Men’s Slim Fit Jeans", original: 2000, discounted: 999, category: "Jeans", imgPlaceholder: "https://m.media-amazon.com/images/I/81CkdqBufvL._SY879_.jpg?text=FinDealVault+Jeans", affLink: "https://www.amazon.in/URBAN-POCKETS-Streetwear-Double-Top-Baggy-D-Blue-jeans-U14-32/dp/B0FJRZ2Q8F?crid=18R1G7PVMQRDO&dib=eyJ2IjoiMSJ9.rrgRXhxXNZfX5aVfC5boLv1MwrcYNCHh-Bh4kLzkbcsvfdG1WEoLcQqtVeDI5bvmH2iCGhUyNrnFEVkEQhBSaCZppURVwPXmvAh9ejTckxVapb_pPZm_gkxIzTrMgrm2FjK32JCqGjSkafAx-rDj8zjXuI6irFwE_BSe0z4UFC3MxHckW9yHsX3puI0lrc0hnuW_4WDV3cpQ_yMe5OtqQQRb5ZBosCcGdDfV2CfnmUa_I_as4mXR2flUXqHBDUGTy320l5_g682x0c7649a0Iojx1FNF9LJDi3WLOhe7X7M.teYCGO8Mm_usKeJZGO5MTnzystFFyU0l0Jset4Q0Css&dib_tag=se&keywords=jeans%2Bfor%2Bman&qid=1776595693&sprefix=Jeans%2Caps%2C522&sr=8-23&th=1&psc=1&linkCode=ll2&tag=findealvault-21&linkId=508c6d672ec104c3fccdc7e2211d8ac4&ref_=as_li_ss_tl" },
+
+    { title: "Essential T‑Shirt (Pack of 2)", original: 1299, discounted: 699, category: "T-Shirts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Tee", affLink: "https://example-affiliate-link.com?ref=findealvault&product=tshirt-pack" },
+    { title: "Classic Denim Jacket", original: 3999, discounted: 2499, category: "Jackets", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Jacket", affLink: "https://example-affiliate-link.com?ref=findealvault&product=denim-jacket" },
+    { title: "Wool Blend Sweater", original: 3499, discounted: 1899, category: "Sweaters", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Sweater", affLink: "https://example-affiliate-link.com?ref=findealvault&product=wool-sweater" },
+    { title: "Chronograph Wrist Watch", original: 5499, discounted: 2999, category: "Watches", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Watch", affLink: "https://example-affiliate-link.com?ref=findealvault&product=chrono-watch" },
+    { title: "Genuine Leather Wallet", original: 1899, discounted: 999, category: "Wallets", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Wallet", affLink: "https://example-affiliate-link.com?ref=findealvault&product=leather-wallet" },
+    { title: "Italian Leather Belt", original: 1599, discounted: 849, category: "Belts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Belt", affLink: "https://example-affiliate-link.com?ref=findealvault&product=leather-belt" },
+    { title: "Ripped Skinny Jeans", original: 2299, discounted: 1099, category: "Jeans", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+RippedJeans", affLink: "https://example-affiliate-link.com?ref=findealvault&product=ripped-jeans" },
+    { title: "Performance Chino Pants", original: 2799, discounted: 1499, category: "Pants", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Chinos", affLink: "https://example-affiliate-link.com?ref=findealvault&product=chino-pants" },
+    { title: "Linen Summer Shirt", original: 1899, discounted: 1049, category: "Shirts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Linen", affLink: "https://example-affiliate-link.com?ref=findealvault&product=linen-shirt" },
+    { title: "Athletic Running Shorts", original: 1299, discounted: 749, category: "Shorts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Runningshorts", affLink: "https://example-affiliate-link.com?ref=findealvault&product=run-shorts" },
+    { title: "Premium V-Neck T‑Shirt", original: 999, discounted: 549, category: "T-Shirts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+VNeck", affLink: "https://example-affiliate-link.com?ref=findealvault&product=vneck-tshirt" },
+    { title: "Quilted Bomber Jacket", original: 4599, discounted: 2799, category: "Jackets", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Bomber", affLink: "https://example-affiliate-link.com?ref=findealvault&product=bomber-jacket" },
+    { title: "Cable Knit Sweater", original: 3299, discounted: 1799, category: "Sweaters", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+CableKnit", affLink: "https://example-affiliate-link.com?ref=findealvault&product=cable-sweater" },
+    { title: "Minimalist Leather Strap Watch", original: 4799, discounted: 2599, category: "Watches", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+LeatherWatch", affLink: "https://example-affiliate-link.com?ref=findealvault&product=minimal-watch" },
+    { title: "Slim Bifold Wallet", original: 1499, discounted: 799, category: "Wallets", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Bifold", affLink: "https://example-affiliate-link.com?ref=findealvault&product=bifold-wallet" },
+    { title: "Reversible Ratchet Belt", original: 1999, discounted: 1199, category: "Belts", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+RatchetBelt", affLink: "https://example-affiliate-link.com?ref=findealvault&product=ratchet-belt" }
+  ];
+
+  // ensure we have at least 12 items, we have 20 items total — perfect mix.
+  const productsGrid = document.getElementById('productsGrid');
+  
+  // Function to render products based on selected category (filterValue: string, "All" or exact category)
+  function renderProducts(categoryFilter) {
+    // clear grid
+    productsGrid.innerHTML = '';
+    
+    // filter products: if categoryFilter === "All" -> show all; else match product.category
+    const filtered = categoryFilter === "All" 
+      ? products 
+      : products.filter(prod => prod.category === categoryFilter);
+    
+    if (filtered.length === 0) {
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = 'no-products';
+      emptyDiv.innerText = '✨ No products in this category yet. Try another filter! ✨';
+      productsGrid.appendChild(emptyDiv);
+      return;
+    }
+    
+    // create product cards
+    filtered.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      // set data-category attribute for potential future but we use filtering based on data anyway (but we need consistent)
+      // To maintain robust filtering from JS we also store data-category on card, but since we are using render on filter click it's fine.
+      // But we set attribute as a good practice:
+      card.setAttribute('data-category', product.category);
+      
+      // image
+      const img = document.createElement('img');
+      img.src = product.imgPlaceholder;
+      img.alt = product.title;
+      img.className = 'product-img';
+      img.loading = 'lazy';
+      
+      // info div
+      const infoDiv = document.createElement('div');
+      infoDiv.className = 'product-info';
+      
+      const titleEl = document.createElement('h3');
+      titleEl.className = 'product-title';
+      titleEl.innerText = product.title;
+      
+      const priceWrapper = document.createElement('div');
+      priceWrapper.className = 'price-wrapper';
+      
+      const oldSpan = document.createElement('span');
+      oldSpan.className = 'old-price';
+      oldSpan.innerText = `₹${product.original.toLocaleString()}`;
+      
+      const discountSpan = document.createElement('span');
+      discountSpan.className = 'discount-price';
+      discountSpan.innerText = `₹${product.discounted.toLocaleString()}`;
+      
+      priceWrapper.appendChild(oldSpan);
+      priceWrapper.appendChild(discountSpan);
+      
+      // Buy Now button
+      const buyBtn = document.createElement('a');
+      buyBtn.className = 'buy-btn';
+      buyBtn.innerText = 'Buy Now @ FinDealVault';
+      buyBtn.href = product.affLink;
+      buyBtn.target = '_blank';
+      buyBtn.rel = 'noopener noreferrer nofollow';
+      // optional affiliate disclaimer (but fine)
+      
+      infoDiv.appendChild(titleEl);
+      infoDiv.appendChild(priceWrapper);
+      infoDiv.appendChild(buyBtn);
+      
+      card.appendChild(img);
+      card.appendChild(infoDiv);
+      productsGrid.appendChild(card);
+    });
+  }
+  
+  // ----- set up filter buttons with active state and filtering -----
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  
+  function setActiveFilter(activeBtn) {
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    activeBtn.classList.add('active');
+  }
+  
+  function handleFilterClick(btn) {
+    const filterValue = btn.getAttribute('data-filter'); // "All", "Jeans", etc.
+    setActiveFilter(btn);
+    renderProducts(filterValue);
+  }
+  
+  // add event listeners to each button
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      handleFilterClick(btn);
+    });
+  });
+  
+  // initial render: show all products (default "All" active)
+  renderProducts('All');
+  
+  // Optional: adjust buy now links so they have consistent ref param, but already fine
+  // For extra robustness, we ensure no external libraries, all vanilla.
+  // For making sure that product images have meaningful alt text, placeholder shows FinDealVault theme.
+  // All buttons open in new tab, works.
+  
+  // minor update: to support dynamic link if needed, but done.
+  // Because we are rendering after filter, each product affiliate URL is exactly as defined.
+  // responsive grid and yellow-orange palette is applied.
+  // Additionally: the hero section background and header use #FFD580, filter active #FF8C00
+  // No external libraries, pure HTML/CSS/JS.
+  
+  // small improvement: prevent default on "All" filter if clicked twice, but that's fine.
+  // Ensure we treat categories correctly: category matches the data-filter strings exactly (Jeans, Pants, Shirts, Shorts, T-Shirts, Jackets, Sweaters, Watches, Wallets, Belts)
+  // Our product categories are exactly matching. Example: "T-Shirts" matches product category "T-Shirts".
+  // verify product list: T-Shirts items: Essential T-Shirt, Premium V-Neck T‑Shirt -> both category "T-Shirts" correct.
+  // Sweaters, etc all matching.
+  // We have 'All' which shows everything.
+  console.log("FinDealVault men's page loaded – responsive & filtered");
+</script>
+</body>
+</html>
