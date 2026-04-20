@@ -277,7 +277,7 @@
 <script>
   // ----- product data: exactly 12+ items across all categories, each with title, original price, discounted price, image placeholder, category, affiliate link
   const products = [
-    { title: "Spykar Men’s Slim Fit Jeans", original: 4799, discounted: 1575, category: "Jeans", imgPlaceholder: "https://m.media-amazon.com/images/I/71uyeDr75iL._SX679_.jpg", affLink: "https://amzn.to/4cZmvQn" },
+    { title: "Spykar Men’s Slim Fit Jeans", original: 4799, discounted: 1575, category: "Jeans", imgPlaceholder: "https://m.media-amazon.com/images/I/71uyeDr75iL._SX679_.jpg?text=FinDealVault+Jeans", affLink: "https://amzn.to/4cZmvQn" },
 
     { title: "Classic Straight Pants", original: 2499, discounted: 1299, category: "Pants", imgPlaceholder: "https://via.placeholder.com/300x400.png?text=FinDealVault+Pants", affLink: "https://example-affiliate-link.com?ref=findealvault&product=straight-pants" },
 
@@ -367,7 +367,7 @@
       // Buy Now button
       const buyBtn = document.createElement('a');
       buyBtn.className = 'buy-btn';
-      buyBtn.innerText = 'Buy Now @ FinDealVault';
+      buyBtn.innerText = 'Buy Now';
       buyBtn.href = product.affLink;
       buyBtn.target = '_blank';
       buyBtn.rel = 'noopener noreferrer nofollow';
