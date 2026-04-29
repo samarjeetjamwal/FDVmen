@@ -1,610 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>FindealVault | Most Wanted Men’s Fashion – Gold & Yellow Edition</title>
-  <meta name="description" content="Discover the most in-demand men's fashion on Amazon India. Premium leather jackets, sneakers, watches, and streetwear – curated for Indian men. Best prices in ₹.">
-  <meta name="keywords" content="men fashion india, amazon affiliate india, mens style, streetwear india, watches, sneakers, FindealVault, best men clothing">
-  <meta name="author" content="FindealVault">
-  <!-- Google Fonts + modern reset -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findeal Vault | Premium Men's Fashion</title>
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: #fffef7;
-      color: #1e293b;
-      scroll-behavior: smooth;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fffdf5;
+        }
 
-    /* custom scrollbar with gold accent */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #fef6e0;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #e6b422;
-      border-radius: 20px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #d49b0a;
-    }
+        header {
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
 
-    .container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 1.5rem 2rem 3rem;
-    }
+        header h1 {
+            margin: 0;
+            letter-spacing: 1px;
+        }
 
-    /* header with yellow/gold identity */
-    .site-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 3px solid #f5d742;
-    }
-    .brand {
-      display: flex;
-      flex-direction: column;
-    }
-    .brand h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #b8860b, #f5c518, #c9991a);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .brand span {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #ad8b3d;
-      letter-spacing: 0.3px;
-    }
-    .india-badge {
-      background: #fff1cf;
-      padding: 0.45rem 1.2rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #b5651e;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      border: 1px solid #ffdfa5;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-    }
+        header p {
+            margin-top: 5px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
 
-    /* hero section with warm gold glow */
-    .hero {
-      background: linear-gradient(125deg, #fff7e8 0%, #fffae9 100%);
-      border-radius: 2rem;
-      padding: 2rem 2rem 2rem 2.5rem;
-      margin: 1.8rem 0 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border: 1px solid #ffe5a3;
-      box-shadow: 0 12px 24px -10px rgba(218, 165, 32, 0.12);
-    }
-    .hero-content h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      color: #2c2412;
-    }
-    .hero-content .highlight {
-      color: #d4af37;
-      border-bottom: 3px solid #f7d44a;
-      display: inline-block;
-      text-shadow: 0 1px 1px rgba(0,0,0,0.02);
-    }
-    .hero-content p {
-      margin-top: 0.7rem;
-      color: #5e4a2b;
-      font-weight: 500;
-      max-width: 550px;
-    }
-    .hero-stats {
-      background: #fef3dc;
-      padding: 0.5rem 1.2rem;
-      border-radius: 70px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #b5710e;
-      border: 1px solid #f3d48f;
-    }
+        .container {
+            padding: 30px;
+        }
 
-    /* section titles gold accent */
-    .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin: 2rem 0 1.5rem;
-      border-left: 5px solid #eab308;
-      padding-left: 1rem;
-    }
-    .section-title h3 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #322814;
-    }
-    .section-title p {
-      font-size: 0.8rem;
-      color: #b1872e;
-      font-weight: 500;
-    }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-    /* product grid */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2rem;
-    }
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ffe082;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    /* card design - gold theme, clean and premium */
-    .product-card {
-      background: #ffffff;
-      border-radius: 1.6rem;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
-      border: 1px solid #fbe6a2;
-      display: flex;
-      flex-direction: column;
-    }
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 35px -12px rgba(212, 175, 55, 0.25);
-      border-color: #e6b422;
-    }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
-    /* image placeholder – clean gold/yellow vibe */
-    .img-placeholder {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background: linear-gradient(145deg, #fff6e5, #fffaec);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      transition: all 0.2s;
-      border-bottom: 2px solid #fee6b8;
-    }
-    .placeholder-content {
-      text-align: center;
-      color: #c2a144;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-    .placeholder-content svg {
-      width: 56px;
-      height: 56px;
-      opacity: 0.7;
-      stroke: #d9aa2b;
-      stroke-width: 1.2;
-      fill: none;
-    }
-    .placeholder-content span {
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: rgba(255, 247, 220, 0.9);
-      padding: 0.2rem 1rem;
-      border-radius: 60px;
-      color: #966b1a;
-    }
-    .badge-trend {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: #eab308;
-      color: #2c2412;
-      font-size: 0.7rem;
-      font-weight: 800;
-      padding: 0.2rem 0.8rem;
-      border-radius: 40px;
-      z-index: 2;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      letter-spacing: 0.4px;
-    }
-    .badge-amazon {
-      position: absolute;
-      bottom: 12px;
-      right: 12px;
-      background: rgba(30, 30, 20, 0.7);
-      backdrop-filter: blur(4px);
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: #f9d565;
-      padding: 0.2rem 0.7rem;
-      border-radius: 30px;
-    }
+        .product-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
 
-    .product-info {
-      padding: 1.2rem 1.2rem 1.3rem;
-      flex: 1;
-    }
-    .product-cat {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #c68716;
-      margin-bottom: 0.5rem;
-    }
-    .product-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 0.4rem;
-      line-height: 1.3;
-      color: #1e2a3a;
-    }
-    .product-desc {
-      font-size: 0.8rem;
-      color: #616d7c;
-      margin: 0.5rem 0;
-      line-height: 1.4;
-    }
-    .price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin: 0.5rem 0 0.2rem;
-    }
-    .price {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #b96f0f;
-    }
-    .price small {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #a8833e;
-    }
-    .old-price {
-      font-size: 0.8rem;
-      color: #b6a07c;
-      text-decoration: line-through;
-    }
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0.4rem 0 0.7rem;
-    }
-    .stars {
-      color: #f5b642;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      font-weight: 600;
-    }
-    .review-count {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #8b6f3c;
-    }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
 
-    /* affiliate button – yellow / gold gradient */
-    .amz-btn {
-      display: block;
-      background: linear-gradient(105deg, #f5c518, #e6aa1f);
-      color: #1e1b10;
-      font-weight: 800;
-      font-size: 0.85rem;
-      text-align: center;
-      padding: 0.7rem 0.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      margin-top: 0.75rem;
-      transition: all 0.25s ease;
-      border: none;
-      width: 100%;
-      font-family: inherit;
-      box-shadow: 0 4px 10px rgba(230, 170, 31, 0.2);
-      letter-spacing: 0.4px;
-    }
-    .amz-btn span {
-      font-weight: 800;
-    }
-    .amz-btn:hover {
-      background: linear-gradient(105deg, #eab308, #d9a117);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 18px rgba(218, 165, 32, 0.3);
-      color: #000;
-    }
+        .product-info h3 {
+            margin: 10px 0;
+            color: #b71c1c;
+        }
 
-    /* disclaimer panel - gold border */
-    .disclaimer-panel {
-      background: #fffcf3;
-      padding: 1rem 1.5rem;
-      border-radius: 1.2rem;
-      margin: 2.8rem 0 1.5rem;
-      font-size: 0.75rem;
-      border-left: 6px solid #eab308;
-      color: #7a6639;
-      font-weight: 500;
-    }
+        .price {
+            font-size: 20px;
+            color: #ff6f00;
+            font-weight: bold;
+        }
 
-    footer {
-      text-align: center;
-      padding-top: 1.5rem;
-      font-size: 0.7rem;
-      color: #c5a153;
-      border-top: 1px solid #feebc8;
-      margin-top: 0.5rem;
-    }
+        .tag {
+            display: inline-block;
+            background: #ffcc00;
+            color: #b71c1c;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
 
-    @media (max-width: 750px) {
-      .container {
-        padding: 1rem;
-      }
-      .hero {
-        padding: 1.2rem;
-      }
-      .hero-content h2 {
-        font-size: 1.5rem;
-      }
-      .products-grid {
-        gap: 1.2rem;
-      }
-      .section-title h3 {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
+        .buy-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            background-color: #b71c1c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .buy-btn:hover {
+            background-color: #7f0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #b71c1c;
+            color: white;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
+
+<header>
+    <h1>Findeal Vault</h1>
+    <p>Premium Men's Fashion | Exclusive Picks</p>
+</header>
+
 <div class="container">
-  <div class="site-header">
-    <div class="brand">
-      <h1>✨ FINEST DEAL VAULT</h1>
-      <span>www.findealvault.online ·</span>
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <!-- INSERT IMAGE LINK -->
+            <img src="https://m.media-amazon.com/images/I/716HjOdoReS._SX679_.jpg" alt="Luxury Watch">
+
+            <div class="product-info">
+                <span class="tag">Premium Pick</span>
+                <h3>Olves Watch</h3>
+                <p class="price">₹67,596</p>
+
+                <!-- INSERT AFFILIATE LINK -->
+                <a href="https://amzn.to/3QFUHc2" target="_blank" class="buy-btn">
+                    View Deal
+                </a>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71hn92WskgL._SX679_.jpg" alt="Leather Jacket">
+
+            <div class="product-info">
+                <span class="tag">Trending</span>
+                <h3>Genuine Leather Jacket</h3>
+                <p class="price">₹29,655</p>
+
+                <a href="https://amzn.to/4eReBe5" target="_blank" class="buy-btn">
+                    View Deal
+                </a>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71UJ-nL39oL._SY695_.jpg" alt="Designer Shoes">
+
+            <div class="product-info">
+                <span class="tag">Hot Deal</span>
+                <h3>Designer Sneakers</h3>
+                <p class="price">₹24,013</p>
+
+                <a href="https://amzn.to/4vY1YE9" target="_blank" class="buy-btn">
+                    View Deal
+                </a>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61HnGtJFWgL._SX679_.jpg" alt="Formal Suit">
+
+            <div class="product-info">
+                <span class="tag">Luxury</span>
+                <h3>Premium Formal Suit</h3>
+                <p class="price">₹16,306</p>
+
+                <a href="https://amzn.to/48uPKZO" target="_blank" class="buy-btn">
+                    View Deal
+                </a>
+            </div>
+        </div>
+
     </div>
-      </div>
-
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Men’s Most Wanted <span class="highlight">Fashion</span><br>Curated for India 🔥</h2>
-      <p>From luxury streetwear to daily staples — these are the highest-rated, most in-demand men's products on Amazon India. Grab the best deals.</p>
-    </div>
-    <div class="hero-stats">
-      ⭐ 12,000+ happy finds | Weekly updated
-    </div>
-  </div>
-
-  <div class="section-title">
-    <h3>✨ Bestsellers & Hottest Picks</h3>
-      </div>
-
-  <div class="products-grid" id="mens-grid">
-    <!-- Product 1 - Genuine Leather Jacket -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <rect x="3" y="7" width="18" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-          </svg>
-          <span>📸 Premium Leather Jacket</span>
-        </div>
-        <div class="badge-trend">🏆 #1 Bestseller</div>
-        <div class="badge-amazon">Amazon.in</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">🧥 OUTERWEAR · LEATHER</div>
-        <div class="product-title">Genuine Leather Café Racer Jacket</div>
-        <div class="product-desc">Premium buffalo leather, quilted lining, YKK zipper. True Indian fit.</div>
-        <div class="price-row">
-          <div class="price">₹5,499 <small>incl. taxes</small></div>
-          <div class="old-price">₹12,999</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★★</span> <span class="review-count">(1,284+ ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE1?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Check on Amazon India &nbsp;→</a>
-      </div>
-    </div>
-
-    <!-- Product 2 - Oversized Hoodie -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M4 7 L20 7 M7 3 L17 3 M12 3 L12 7 M9 15 L15 15 M6 11 L18 11 M8 19 L16 19" stroke="currentColor"/>
-            <rect x="7" y="7" width="10" height="12" rx="2"></rect>
-          </svg>
-          <span>🔥 Heavyweight Hoodie</span>
-        </div>
-        <div class="badge-trend">🌿 Streetwear Essence</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">👕 HOODIES & SWEATSHIRTS</div>
-        <div class="product-title">Oversized Fleece Hoodie (450 GSM)</div>
-        <div class="product-desc">Cotton poly blend, front pouch, dropped shoulders. Perfect for winters.</div>
-        <div class="price-row">
-          <div class="price">₹1,999 <small>limited deal</small></div>
-          <div class="old-price">₹3,499</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★½</span> <span class="review-count">(2.8k ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE2?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Grab on Amazon →</a>
-      </div>
-    </div>
-
-    <!-- Product 3 - Slim Fit Stretch Chinos -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M6 4L8 6L7 20H17L16 6L18 4" stroke="currentColor"/>
-            <line x1="9" y1="12" x2="15" y2="12" stroke="currentColor"/>
-          </svg>
-          <span>👖 Stretch Chinos</span>
-        </div>
-        <div class="badge-trend">⭐ Amazon's Choice</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">👖 BOTTOMS · CHINOS</div>
-        <div class="product-title">Slim Fit Performance Chino (4-way stretch)</div>
-        <div class="product-desc">Wrinkle-free, moisture-wicking, tapered fit — office to weekend.</div>
-        <div class="price-row">
-          <div class="price">₹1,649 <small>+ 5% coupon</small></div>
-          <div class="old-price">₹2,999</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★☆</span> <span class="review-count">(982 reviews)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE3?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 View on Amazon →</a>
-      </div>
-    </div>
-
-    <!-- Product 4 - Stainless Steel Chronograph Watch -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <circle cx="12" cy="12" r="9" stroke="currentColor"/>
-            <polyline points="12 7 12 12 15 15" stroke="currentColor"/>
-          </svg>
-          <span>⌚ Premium Chronograph</span>
-        </div>
-        <div class="badge-trend">⌛ Premium Choice</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">⌚ ACCESSORIES · WATCHES</div>
-        <div class="product-title">Stainless Steel Chronograph (Day-Date)</div>
-        <div class="product-desc">Japanese quartz movement, blue sunray dial, 5ATM water resistant.</div>
-        <div class="price-row">
-          <div class="price">₹3,999 <small>gift box</small></div>
-          <div class="old-price">₹8,499</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★★</span> <span class="review-count">(2.1k ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE4?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Check price on Amazon →</a>
-      </div>
-    </div>
-
-    <!-- Product 5 - Max Cushion Sneakers -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M5 13L7 10H19L21 13M5 13L3 17H21L19 13M5 13H19" stroke="currentColor"/>
-            <circle cx="7" cy="17" r="2" stroke="currentColor"/>
-            <circle cx="17" cy="17" r="2" stroke="currentColor"/>
-          </svg>
-          <span>👟 AirFlo Sneakers</span>
-        </div>
-        <div class="badge-trend">⚡ Weekly Top Pick</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">👟 FOOTWEAR · SNEAKERS</div>
-        <div class="product-title">Men's Max Cushion Running Shoes</div>
-        <div class="product-desc">Breathable flyknit, memory foam insole, anti-skid rubber outsole.</div>
-        <div class="price-row">
-          <div class="price">₹2,299 <small>free delivery</small></div>
-          <div class="old-price">₹4,999</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★½</span> <span class="review-count">(3.4k ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE5?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Best price on Amazon →</a>
-      </div>
-    </div>
-
-    <!-- Product 6 - Aviator Sunglasses UV400 -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M3 10L5 8H19L21 10M4 10V16M20 10V16" stroke="currentColor"/>
-            <circle cx="8" cy="11" r="1.5" stroke="currentColor"/>
-            <circle cx="16" cy="11" r="1.5" stroke="currentColor"/>
-          </svg>
-          <span>🕶️ UV400 Aviators</span>
-        </div>
-        <div class="badge-trend">🔥 5K+ bought</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">🕶️ EYEWEAR</div>
-        <div class="product-title">Classic Metal Aviator Polarized Sunglasses</div>
-        <div class="product-desc">UV400 protection, metal frame, premium case & cleaning cloth.</div>
-        <div class="price-row">
-          <div class="price">₹1,099 <small>+ extra 10% off</small></div>
-          <div class="old-price">₹2,499</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★☆</span> <span class="review-count">(4.9k ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE6?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 View on Amazon.in →</a>
-      </div>
-    </div>
-
-    <!-- Product 7 - Vintage Leather Laptop Backpack -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <rect x="5" y="8" width="14" height="13" rx="2" stroke="currentColor"/>
-            <path d="M8 8V6C8 4.9 8.9 4 10 4H14C15.1 4 16 4.9 16 6V8" stroke="currentColor"/>
-          </svg>
-          <span>🎒 Vintage Leather Bag</span>
-        </div>
-        <div class="badge-trend">📦 Editor's Pick</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">👜 BAGS · BACKPACKS</div>
-        <div class="product-title">Handcrafted Leather Laptop Backpack (15.6")</div>
-        <div class="product-desc">Full-grain leather, anti-theft pocket, premium brass hardware.</div>
-        <div class="price-row">
-          <div class="price">₹3,849 <small>with coupon</small></div>
-          <div class="old-price">₹7,999</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★★</span> <span class="review-count">(1,203 ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE7?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Amazon best deal →</a>
-      </div>
-    </div>
-
-    <!-- Product 8 - Minimalist White Sneakers -->
-    <div class="product-card">
-      <div class="img-placeholder">
-        <div class="placeholder-content">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M4 15L5 9H19L20 15M5 9L6 6H18L19 9" stroke="currentColor"/>
-            <circle cx="16" cy="15" r="1.5" stroke="currentColor"/>
-          </svg>
-          <span>👟 Minimalist Sneakers</span>
-        </div>
-        <div class="badge-trend">✨ Clean aesthetic</div>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">👟 SNEAKERS · CASUAL</div>
-        <div class="product-title">Low-Top Vegan Leather Sneakers</div>
-        <div class="product-desc">Padded collar, breathable lining, everyday essential with jeans.</div>
-        <div class="price-row">
-          <div class="price">₹1,899 <small>free size exchange</small></div>
-          <div class="old-price">₹3,299</div>
-        </div>
-        <div class="rating"><span class="stars">★★★★½</span> <span class="review-count">(650+ ratings)</span></div>
-        <a href="https://www.amazon.in/dp/B0EXAMPLE8?tag=findealvault-21" class="amz-btn" target="_blank" rel="nofollow sponsored">👉 Shop now on Amazon →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="disclaimer-panel">
-    <strong>📢 Affiliate Disclosure:</strong> FindealVault is a participant in the Amazon India Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.in. As an Amazon Associate, we earn from qualifying purchases. All prices are in Indian Rupees (₹) and reflect the latest bestseller trend. Product images are placeholders – actual product images and offers appear on Amazon.in.
-  </div>
-
-  <footer>
-    <p>© 2025 FindealVault — www.findealvault.online | India's most in-demand men's fashion collection | Affiliate links support our curation</p>
-    
-  </footer>
 </div>
+
+<footer>
+    © 2026 FindealVault.online | Affiliate Disclosure: We may earn commissions from purchases made through our links.
+</footer>
+
 </body>
 </html>
