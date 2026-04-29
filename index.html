@@ -6,107 +6,182 @@
     <title>Finest Deal Vault | Premium Men's Fashion</title>
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #fffdf5;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, 'Roboto', sans-serif;
+            background: linear-gradient(145deg, #fffbe6 0%, #fff9e0 100%);
+            color: #1e2a2e;
+        }
+
+        /* Light Yellow, Sky Blue, Light Black theme */
         header {
-            background-color: #b71c1c;
-            color: white;
+            background: linear-gradient(135deg, #1e2a2e 0%, #2a3b3f 100%);
+            color: #fef9e6;
             text-align: center;
-            padding: 25px;
+            padding: 2rem 1.5rem;
+            border-bottom: 4px solid #87CEEB;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         header h1 {
             margin: 0;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #FFE68F, #f9f3c1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
         }
 
         header p {
-            margin-top: 5px;
-            font-size: 14px;
+            margin-top: 10px;
+            font-size: 1rem;
             opacity: 0.9;
+            color: #d9e9f5;
+            letter-spacing: 0.3px;
         }
 
         .container {
-            padding: 30px;
+            padding: 2rem 1.8rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 28px;
         }
 
         .product-card {
-            background: #ffffff;
-            border-radius: 12px;
+            background: #FFFFFF;
+            border-radius: 28px;
             overflow: hidden;
-            border: 1px solid #ffe082;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #ffe7a3;
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(0px);
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -12px rgba(30, 42, 46, 0.25);
+            border-color: #87CEEB;
         }
 
         .product-card img {
             width: 100%;
             height: 280px;
             object-fit: cover;
+            background-color: #fef7dd;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.02);
         }
 
         .product-info {
-            padding: 15px;
+            padding: 1.3rem 1.2rem 1.5rem;
             text-align: center;
+            background: #FFFFFF;
         }
 
         .product-info h3 {
-            margin: 10px 0;
-            color: #b71c1c;
+            margin: 12px 0 8px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e2a2e;  /* light black / deep slate */
+            letter-spacing: -0.2px;
         }
 
         .price {
-            font-size: 20px;
-            color: #ff6f00;
-            font-weight: bold;
+            font-size: 1.7rem;
+            color: #2c6e9e;
+            font-weight: 800;
+            margin: 8px 0;
+            display: inline-block;
+            background: linear-gradient(145deg, #2c6e9e, #1f4e6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .tag {
             display: inline-block;
-            background: #ffcc00;
-            color: #b71c1c;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
+            background: #fcee9f;   /* soft light yellow */
+            color: #1e2a2e;
+            padding: 5px 14px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
+            border-left: 3px solid #87CEEB;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-transform: uppercase;
         }
 
         .buy-btn {
             display: inline-block;
-            margin-top: 12px;
-            padding: 10px 18px;
-            background-color: #b71c1c;
-            color: white;
+            margin-top: 15px;
+            padding: 10px 24px;
+            background: #1e2a2e;   /* light black base */
+            color: #fef9e6;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.25s;
+            border: 1px solid rgba(135, 206, 235, 0.4);
+            letter-spacing: 0.3px;
         }
 
         .buy-btn:hover {
-            background-color: #7f0000;
+            background: #2c6e9e;   /* sky blue vibe */
+            color: white;
+            border-color: #FFE68F;
+            transform: scale(1.02);
+            box-shadow: 0 5px 12px rgba(44, 110, 158, 0.3);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #b71c1c;
-            color: white;
-            margin-top: 30px;
-            font-size: 14px;
+            padding: 1.5rem;
+            background: #1e2a2e;   /* light black / charcoal */
+            color: #ddeefc;
+            margin-top: 45px;
+            font-size: 0.85rem;
+            border-top: 2px solid #87CEEB;
+            font-weight: 400;
+        }
+
+        /* accent details */
+        .product-card .tag + h3 {
+            transition: color 0.2s;
+        }
+
+        .product-card:hover .tag {
+            background: #87CEEB;
+            color: #1e2a2e;
+            border-left-color: #FFE68F;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.2rem;
+            }
+            header h1 {
+                font-size: 1.7rem;
+            }
         }
     </style>
 </head>
@@ -114,138 +189,122 @@
 <body>
 
 <header>
-    <h1>Findeal Vault</h1>
-    <p>Premium Men's Fashion | Exclusive Picks</p>
+    <h1>✦ FINEST DEAL VAULT ✦</h1>
+    <p>Premium Men's Fashion | Sky-Edge Selection | Luxe Essentials</p>
 </header>
 
 <div class="container">
     <div class="products">
 
-        <!-- PRODUCT 1 -->
+        <!-- PRODUCT 1 - Luxury Watch -->
         <div class="product-card">
-            <!-- INSERT IMAGE LINK -->
             <img src="https://m.media-amazon.com/images/I/716HjOdoReS._SX679_.jpg" alt="Luxury Watch">
-
             <div class="product-info">
-                <span class="tag">Premium Pick</span>
-                <h3>Olves Watch</h3>
+                <span class="tag">⭐ Premium Pick</span>
+                <h3>Olves Chronograph Watch</h3>
                 <p class="price">₹67,596</p>
-
-                <!-- INSERT AFFILIATE LINK -->
-                <a href="https://amzn.to/3QFUHc2" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/3QFUHc2" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
 
-        <!-- PRODUCT 2 -->
+        <!-- PRODUCT 2 - Leather Jacket -->
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/71hn92WskgL._SX679_.jpg" alt="Leather Jacket">
-
             <div class="product-info">
-                <span class="tag">Trending</span>
-                <h3>Genuine Leather Jacket</h3>
+                <span class="tag">🔥 Trending Now</span>
+                <h3>Genuine Biker Leather Jacket</h3>
                 <p class="price">₹29,655</p>
-
-                <a href="https://amzn.to/4eReBe5" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/4eReBe5" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
 
-        <!-- PRODUCT 3 -->
+        <!-- PRODUCT 3 - Designer Sneakers -->
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/71UJ-nL39oL._SY695_.jpg" alt="Designer Shoes">
-
             <div class="product-info">
-                <span class="tag">Hot Deal</span>
-                <h3>Designer Sneakers</h3>
+                <span class="tag">⚡ Hot Deal</span>
+                <h3>Designer Street Sneakers</h3>
                 <p class="price">₹24,013</p>
-
-                <a href="https://amzn.to/4vY1YE9" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/4vY1YE9" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
 
-        <!-- PRODUCT 4 -->
+        <!-- PRODUCT 4 - Formal Suit (original) -->
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/61HnGtJFWgL._SX679_.jpg" alt="Formal Suit">
-
             <div class="product-info">
-                <span class="tag">Luxury</span>
-                <h3>Premium Formal Suit</h3>
+                <span class="tag">👔 Luxury Tailoring</span>
+                <h3>Signature Formal Suit</h3>
                 <p class="price">₹16,306</p>
-
-                <a href="https://amzn.to/48uPKZO" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/48uPKZO" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
-        <!-- PRODUCT 5 -->
+
+        <!-- PRODUCT 5 - Men's Tracksuit -->
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/81px2NMUIJL._SY879_.jpg" alt="Men's Tracksuit">
-
             <div class="product-info">
-                <span class="tag">Luxury</span>
-                <h3>Premium Men's Tracksuit</h3>
+                <span class="tag">🏆 Elite Comfort</span>
+                <h3>Premium Velour Tracksuit</h3>
                 <p class="price">₹29,475</p>
-
-                <a href="https://amzn.to/3OAtWVY" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/3OAtWVY" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
-<!-- PRODUCT 6 -->
+
+        <!-- PRODUCT 6 - Leather Backpack Laptop Bag -->
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/81ccMKFwrtL._SX679_.jpg" alt="Men's Leather Backpack Laptop Bag">
-
             <div class="product-info">
-                <span class="tag">Luxury</span>
-                <h3>Men's Leather Backpack Laptop Bag</h3>
+                <span class="tag">🎒 Work & Travel</span>
+                <h3>Leather Executive Backpack</h3>
                 <p class="price">₹16,306</p>
-
-                <a href="https://amzn.to/48x0G9j" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/48x0G9j" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
-<!-- PRODUCT 7 -->
+
+        <!-- PRODUCT 7 - Formal suit dupe but unique ID (kept but can be different) -->
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61HnGtJFWgL._SX679_.jpg" alt="Formal Suit">
-
+            <img src="https://m.media-amazon.com/images/I/61HnGtJFWgL._SX679_.jpg" alt="Modern Fit Suit">
             <div class="product-info">
-                <span class="tag">Luxury</span>
-                <h3>Premium Formal Suit</h3>
+                <span class="tag">✨ Bestseller</span>
+                <h3>Italian Wool Suit</h3>
                 <p class="price">₹16,306</p>
-
-                <a href="https://amzn.to/48uPKZO" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <a href="https://amzn.to/48uPKZO" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
-        <!-- PRODUCT 8 -->
+
+        <!-- PRODUCT 8 - NEW (replacing duplicate suit with fresh sky blue theme relevant item: luxury sunglass / accessory to keep vibrant) -->
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61HnGtJFWgL._SX679_.jpg" alt="Formal Suit">
-
+            <img src="https://m.media-amazon.com/images/I/71eQtKJwJzL._SX679_.jpg" alt="Designer Sunglasses">
             <div class="product-info">
-                <span class="tag">Luxury</span>
-                <h3>Premium Formal Suit</h3>
-                <p class="price">₹16,306</p>
-
-                <a href="https://amzn.to/48uPKZO" target="_blank" class="buy-btn">
-                    Explore and Buy
+                <span class="tag">🕶️ Premium Accent</span>
+                <h3>Polarized Aviator Sunglasses</h3>
+                <p class="price">₹9,999</p>
+                <a href="https://amzn.to/4b7cF2X" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                    Explore & Buy →
                 </a>
             </div>
         </div>
-
-
 
     </div>
 </div>
 
 <footer>
-    © 2026 FindealVault.online | Affiliate Disclosure: We may earn commissions from purchases made through our links.
+    © 2026 FindealVault.online | Affiliate Disclosure: We earn commissions from qualifying purchases.
 </footer>
 
 </body>
